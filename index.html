@@ -35,6 +35,11 @@
             border-radius: 10px;
             margin: 15px 0;
         }
+        .profile-photo {
+            max-width: 150px; /* Tamaño de la foto de perfil */
+            border-radius: 50%; /* Para que sea redonda */
+            margin: 20px 0;
+        }
         .btn {
             display: inline-block;
             background-color: #3498db;
@@ -52,10 +57,29 @@
         .social-btn {
             background-color: #555;
         }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            text-align: left;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .services-list li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img class="profile-photo" src="que_se_vea_que_miro_-71266.jpg" alt="Foto de NEGRITO@">
+        
         <img src="image_86cd74.jpg" alt="Logo de Creativa IA">
         
         <h1>Creativa IA</h1>
@@ -73,6 +97,16 @@
             <a href="https://wa.me/51907711383" class="btn social-btn" target="_blank">WhatsApp</a>
             <a href="https://www.instagram.com/maxi.h.torres" class="btn social-btn" target="_blank">Instagram</a>
             <a href="https://www.tiktok.com/@maxi_h_torres" class="btn social-btn" target="_blank">TikTok</a>
+        </div>
+
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <ul class="services-list">
+                <li>Diseño de Logos e Identidad Visual</li>
+                <li>Creación de Contenido Digital para Redes Sociales</li>
+                <li>Desarrollo de Sitios Web Simples</li>
+                <li>Edición de Video y Fotografía</li>
+            </ul>
         </div>
     </div>
 </body>
