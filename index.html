@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativa IA | Portafolio de NEGRITO@</title>
+    <meta name="description" content="Creativa IA - Portafolio de NEGRITO@: diseño de logos, páginas web y contenido digital con inteligencia artificial.">
+    <meta name="keywords" content="creativa ia, portafolio, diseño, inteligencia artificial, negrito@">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
+        nav {
+            background-color: #3498db;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             max-width: 800px;
             margin: auto;
@@ -31,13 +49,13 @@
             color: #333;
         }
         img {
-            max-width: 200px; /* Tamaño del logo */
+            max-width: 200px;
             border-radius: 10px;
             margin: 15px 0;
         }
         .profile-photo {
-            max-width: 150px; /* Tamaño de la foto de perfil */
-            border-radius: 50%; /* Para que sea redonda */
+            max-width: 150px;
+            border-radius: 50%;
             margin: 20px 0;
         }
         .btn {
@@ -49,9 +67,11 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .btn:hover {
             background-color: #2980b9;
+            transform: scale(1.05);
         }
 
         .social-btn {
@@ -74,12 +94,34 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+
+        /* Modo oscuro */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: #f4f4f9;
+        }
+        .dark-mode .services-list li {
+            background-color: #2c2c2c;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="proyectos.html" target="_blank">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <button onclick="toggleDarkMode()" style="background:none; border:none; color:white; cursor:pointer;">🌙</button>
+    </nav>
+
+    <div class="container" id="inicio">
         <img class="profile-photo" src="IMG_20201221_175000.jpg" alt="Foto de NEGRITO@">
-        
         <img src="image_86cd74.jpg" alt="Logo de Creativa IA">
         
         <h1>Creativa IA</h1>
@@ -90,7 +132,7 @@
             Ayudamos a emprendedores y pequeñas empresas a destacar en línea.
         </p>
 
-        <div>
+        <div id="contacto">
             <a href="mailto:segundomaximohuayambetorres@gmail.com" class="btn" target="_blank">Contáctame</a>
             <a href="https://github.com/maxi12-flix" class="btn social-btn" target="_blank">Mi GitHub</a>
             <a href="https://www.facebook.com/jannirefflucero.yacielpanduroht" class="btn social-btn" target="_blank">Facebook</a>
@@ -100,7 +142,7 @@
             <a href="proyectos.html" class="btn social-btn" target="_blank">Ver Proyectos</a>
         </div>
 
-        <div class="container">
+        <div id="servicios">
             <h2>Nuestros Servicios</h2>
             <ul class="services-list">
                 <li>Diseño de Logos e Identidad Visual</li>
@@ -110,5 +152,16 @@
             </ul>
         </div>
     </div>
+
+    <footer>
+        <p>© <span id="year"></span> Creativa IA | NEGRITO@. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
